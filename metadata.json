@@ -1,0 +1,6 @@
+{
+  "name": "MartechAdda FAQ Section",
+  "description": "A premium, high-growth minimalist FAQ section page for MartechAdda with category filters, interactive search, expandable accordions, and custom support channels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
