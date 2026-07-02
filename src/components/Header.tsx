@@ -69,43 +69,34 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-[72px] left-0 w-full bg-white border-b border-slate-200 px-6 py-5 flex flex-col shadow-md z-50">
+        <div className="md:hidden absolute top-[72px] left-0 w-full bg-white border-b border-slate-200 px-6 py-5 flex flex-col shadow-md">
           <a
             href="https://www.martechadda.com/v4/home"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="py-3 px-2 rounded-lg border-b border-slate-100 text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+            className="py-3 border-b border-slate-100 text-slate-700"
           >
             Marketing Services
           </a>
-
           <a
             href="https://www.martechadda.com/v4/home"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="py-3 px-2 rounded-lg border-b border-slate-100 text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+            className="py-3 border-b border-slate-100 text-slate-700"
           >
             How It Works
           </a>
-
           <a
             href="https://www.martechadda.com/v4/home"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="py-3 px-2 rounded-lg border-b border-slate-100 text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+            className="py-3 border-b border-slate-100 text-slate-700"
           >
             Resources
           </a>
-
           <a
             href="https://www.martechadda.com/v4/home"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="py-3 px-2 rounded-lg border-b border-slate-100 text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+            className="py-3 border-b border-slate-100 text-slate-700"
           >
             For Experts
           </a>
-
           <a
             href="https://www.martechadda.com/login"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="py-3 px-2 rounded-lg text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+            className="py-3 text-slate-700"
           >
             Login
           </a>
