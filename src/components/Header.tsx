@@ -34,7 +34,7 @@ export default function Header() {
 
           <a
             href="https://www.martechadda.com/v4/home"
-            className="px-8 text-slate-600 git push origin main font-medium text-sm border-r border-slate-200"
+            className="px-8 text-slate-600 hover:text-[#ff2e2e] main font-medium text-sm border-r border-slate-200"
           >
             Resources
           </a>
