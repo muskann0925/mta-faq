@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { X, Calendar, Clock, Sparkles, Building, CheckCircle2 } from "lucide-react";
+import {
+  X,
+  Calendar,
+  Clock,
+  Sparkles,
+  Building,
+  CheckCircle2,
+} from "lucide-react";
 
 interface BookCallModalProps {
   isOpen: boolean;
@@ -15,7 +22,8 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
     while (days.length < 5) {
       current.setDate(current.getDate() + 1);
       const dayOfWeek = current.getDay();
-      if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Skip weekends
+      if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+        // Skip weekends
         days.push(new Date(current));
       }
     }
@@ -23,7 +31,13 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
   };
 
   const businessDays = getNextBusinessDays();
-  const timeSlots = ["09:30 AM", "11:00 AM", "01:30 PM", "03:00 PM", "04:30 PM"];
+  const timeSlots = [
+    "09:30 AM",
+    "11:00 AM",
+    "01:30 PM",
+    "03:00 PM",
+    "04:30 PM",
+  ];
 
   const [selectedDate, setSelectedDate] = useState<Date>(businessDays[0]);
   const [selectedTime, setSelectedTime] = useState<string>(timeSlots[0]);
@@ -46,7 +60,11 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
   };
 
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+    return date.toLocaleDateString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+    });
   };
 
   return (
@@ -88,13 +106,16 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
                 >
                   <div className="flex items-center gap-2 text-[#ff5a1f] mb-2">
                     <Sparkles className="w-4 h-4 animate-pulse" />
-                    <span className="text-xs font-bold uppercase tracking-wider font-sans">Strategic Discovery</span>
+                    <span className="text-xs font-bold uppercase tracking-wider font-sans">
+                      Strategic Discovery
+                    </span>
                   </div>
                   <h3 className="font-display text-2xl font-bold text-slate-900 mb-1 tracking-tight">
                     Book a Call with MartechAdda
                   </h3>
                   <p className="font-sans text-sm text-slate-500 mb-6">
-                    Connect with our solution architect to learn how to unify your data stack and streamline your operations.
+                    Connect with our solution architect to learn how to unify
+                    your data stack and streamline your operations.
                   </p>
 
                   <form onSubmit={handleBook} className="space-y-4">
@@ -136,7 +157,8 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
                       </label>
                       <div className="grid grid-cols-5 gap-2">
                         {businessDays.map((date, idx) => {
-                          const isSelected = selectedDate.toDateString() === date.toDateString();
+                          const isSelected =
+                            selectedDate.toDateString() === date.toDateString();
                           return (
                             <button
                               type="button"
@@ -149,13 +171,17 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
                               }`}
                             >
                               <span className="text-[10px] uppercase font-bold opacity-75 font-sans">
-                                {date.toLocaleDateString("en-US", { weekday: "short" })}
+                                {date.toLocaleDateString("en-US", {
+                                  weekday: "short",
+                                })}
                               </span>
                               <span className="text-sm font-bold font-display">
                                 {date.getDate()}
                               </span>
                               <span className="text-[9px] font-sans">
-                                {date.toLocaleDateString("en-US", { month: "short" })}
+                                {date.toLocaleDateString("en-US", {
+                                  month: "short",
+                                })}
                               </span>
                             </button>
                           );
@@ -179,7 +205,7 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
                               onClick={() => setSelectedTime(time)}
                               className={`py-1.5 px-3 rounded-full text-xs font-semibold border cursor-pointer transition-all duration-200 ${
                                 isSelected
-                                  ? "bg-slate-900 text-white border-slate-900 shadow-sm"
+                                  ? "bg-black text-white border-slate-900 shadow-sm"
                                   : "bg-slate-50 text-slate-600 border-slate-200 hover:border-[#ff5a1f]/50"
                               }`}
                             >
@@ -228,7 +254,7 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
                     <button
                       type="submit"
                       disabled={isBooking}
-                      className="w-full mt-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-6 rounded-full font-sans text-sm transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full mt-4 bg-black hover:bg-[#ff5a1f] text-white font-semibold py-3 px-6 rounded-full font-sans text-sm transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isBooking ? (
                         <>
@@ -259,20 +285,35 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
                   </h3>
                   <div className="bg-slate-50 p-4 rounded-2xl max-w-sm mx-auto mb-6 text-left border border-slate-200 font-sans text-sm">
                     <div className="flex justify-between border-b border-slate-100 pb-2 mb-2">
-                      <span className="font-bold text-slate-950">Representative:</span>
-                      <span className="text-slate-600 font-medium">Solutions Architect</span>
+                      <span className="font-bold text-slate-950">
+                        Representative:
+                      </span>
+                      <span className="text-slate-600 font-medium">
+                        Solutions Architect
+                      </span>
                     </div>
                     <div className="flex justify-between border-b border-slate-100 pb-2 mb-2">
                       <span className="font-bold text-slate-950">Date:</span>
-                      <span className="text-[#ff5a1f] font-semibold">{formatDate(selectedDate)}</span>
+                      <span className="text-[#ff5a1f] font-semibold">
+                        {formatDate(selectedDate)}
+                      </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="font-bold text-slate-950">Time Slot:</span>
-                      <span className="text-[#ff5a1f] font-semibold">{selectedTime} (UTC-7)</span>
+                      <span className="font-bold text-slate-950">
+                        Time Slot:
+                      </span>
+                      <span className="text-[#ff5a1f] font-semibold">
+                        {selectedTime} (UTC-7)
+                      </span>
                     </div>
                   </div>
                   <p className="font-sans text-sm text-slate-500 max-w-sm mx-auto mb-8 leading-relaxed">
-                    We've added this to our calendars and dispatched a Calendar invitation with a Google Meet link to <span className="font-semibold text-slate-900">{email}</span>. See you then!
+                    We've added this to our calendars and dispatched a Calendar
+                    invitation with a Google Meet link to{" "}
+                    <span className="font-semibold text-slate-900">
+                      {email}
+                    </span>
+                    . See you then!
                   </p>
                   <button
                     onClick={() => {

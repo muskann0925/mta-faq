@@ -38,32 +38,57 @@ export default function Footer({ onContactClick, onBookClick }: FooterProps) {
           </h5>
           <ul className="space-y-3 text-s text-white">
             <li>
-              <a href="#" className="hover:text-[#ff5a1f] transition-colors">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-[#ff5a1f] transition-colors">
+              <a
+                href="https://www.martechadda.com/v4/home"
+                className="hover:text-[#ff5a1f] transition-colors"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#ff5a1f] transition-colors">
+              <a
+                href="https://www.martechadda.com/v4/home"
+                className="hover:text-[#ff5a1f] transition-colors"
+              >
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#ff5a1f] transition-colors">
-                Contact
+              <a
+                href="https://www.martechadda.com/v4/home"
+                className="hover:text-[#ff5a1f] transition-colors"
+              >
+                Comparison
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.martechadda.com/v4/home"
+                className="hover:text-[#ff5a1f] transition-colors"
+              >
+                Testimonials
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.martechadda.com/v4/home"
+                className="hover:text-[#ff5a1f] transition-colors"
+              >
+                FAQs
+              </a>
+            </li>
+            {/*<li>
+              <a href="https://www.martechadda.com/contact" className="hover:text-[#ff5a1f] transition-colors">
+                Contact
+              </a>
+            </li>*/}
           </ul>
         </div>
 
         {/* Company */}
         <div>
           <h5 className="text-white font-sans text-sm font-semibold tracking-wide text-slate-200 mb-4 uppercase tracking-wider opacity-75">
-            Privacy Policy
+            Contact
           </h5>
           <ul className="space-y-3 text-s text-white">
             <li>
@@ -136,7 +161,7 @@ export default function Footer({ onContactClick, onBookClick }: FooterProps) {
 
           <div className="flex flex-col gap-4">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/martechadda/"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-3 text-white hover:text-[#ff5a1f] transition-colors group"
@@ -148,7 +173,7 @@ export default function Footer({ onContactClick, onBookClick }: FooterProps) {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/martechadda/"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-3 text-white hover:text-[#ff5a1f] transition-colors group"

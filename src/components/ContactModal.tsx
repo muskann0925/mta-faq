@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { X, Send, Mail, User, Info, FileText, CheckCircle2 } from "lucide-react";
+import {
+  X,
+  Send,
+  Mail,
+  User,
+  Info,
+  FileText,
+  CheckCircle2,
+} from "lucide-react";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -79,7 +87,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     Send a Message
                   </h3>
                   <p className="font-sans text-sm text-slate-500 mb-6">
-                    Have a custom inquiry or technical integration question? Write to us and we'll reply within 2 hours.
+                    Have a custom inquiry or technical integration question?
+                    Write to us and we'll reply within 2 hours.
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-4">
@@ -94,7 +103,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                           type="text"
                           required
                           value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, name: e.target.value })
+                          }
                           className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:border-[#ff5a1f] focus:ring-2 focus:ring-[#ff5a1f]/20 focus:outline-none transition-all font-sans text-sm text-slate-800"
                           placeholder="Jane Doe"
                         />
@@ -112,7 +123,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                           type="email"
                           required
                           value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, email: e.target.value })
+                          }
                           className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:border-[#ff5a1f] focus:ring-2 focus:ring-[#ff5a1f]/20 focus:outline-none transition-all font-sans text-sm text-slate-800"
                           placeholder="jane@company.com"
                         />
@@ -127,7 +140,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         </label>
                         <select
                           value={formData.category}
-                          onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              category: e.target.value,
+                            })
+                          }
                           className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:border-[#ff5a1f] focus:ring-2 focus:ring-[#ff5a1f]/20 focus:outline-none transition-all font-sans text-sm appearance-none cursor-pointer text-slate-800"
                         >
                           <option value="general">General</option>
@@ -147,7 +165,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                           <input
                             type="text"
                             value={formData.subject}
-                            onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                subject: e.target.value,
+                              })
+                            }
                             className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:border-[#ff5a1f] focus:ring-2 focus:ring-[#ff5a1f]/20 focus:outline-none transition-all font-sans text-sm text-slate-800"
                             placeholder="How do I..."
                           />
@@ -164,7 +187,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         required
                         rows={4}
                         value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, message: e.target.value })
+                        }
                         className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:border-[#ff5a1f] focus:ring-2 focus:ring-[#ff5a1f]/20 focus:outline-none transition-all font-sans text-sm resize-none text-slate-800"
                         placeholder="Please elaborate on your integration or subscription query..."
                       />
@@ -174,7 +199,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full mt-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-6 rounded-full font-sans text-sm transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full mt-4 bg-black hover:bg-[#ff5a1f] text-white font-semibold py-3 px-6 rounded-full font-sans text-sm transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
                         <>
@@ -205,7 +230,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     Message Dispatched!
                   </h3>
                   <p className="font-sans text-sm text-slate-500 max-w-sm mx-auto mb-8 leading-relaxed">
-                    Thank you. Your message has been successfully routed to our support team. We've sent a confirmation to your email and will be in touch shortly.
+                    Thank you. Your message has been successfully routed to our
+                    support team. We've sent a confirmation to your email and
+                    will be in touch shortly.
                   </p>
                   <button
                     onClick={() => {

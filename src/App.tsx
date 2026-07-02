@@ -183,8 +183,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-[#ff5a1f]/20 flex flex-col font-sans">
       {/* Header */}
-      <Header onGetStartedClick={() => setIsBookCallOpen(true)} />
 
+      <Header />
       {/* Main Content Area */}
       <main className="pt-[72px] flex-grow">
         {/* Hero Section */}
@@ -433,7 +433,7 @@ export default function App() {
               </AnimatePresence>
 
               {/* Still Have Questions? Banner CTA */}
-              <div className="bg-gradient-to-br from-[#fec163] to-[#ff7a45] text-white rounded-[24px] p-8 md:p-10 mt-16 overflow-hidden relative group shadow-xl shadow-[#ff5a1f]/10 border-0">
+              <div className="bg-gradient-to-br from-[#ff6a2a] to-[#ff8455] text-white rounded-[24px] p-8 md:p-10 mt-16 overflow-hidden relative group shadow-xl shadow-[#ff5a1f]/10 border-0">
                 {/* Dots overlay background matching design */}
                 <div
                   className="absolute inset-0 opacity-10 pointer-events-none transition-transform duration-1000 group-hover:scale-105"
@@ -461,7 +461,7 @@ export default function App() {
                   <div className="flex flex-wrap justify-center gap-3 flex-shrink-0 w-full md:w-auto">
                     <button
                       onClick={() => setIsBookCallOpen(true)}
-                      className="px-6 py-2.5 bg-slate-900 text-white font-extrabold text-sm rounded-xl hover:bg-slate-950 transition-all duration-300 shadow-sm cursor-pointer w-full sm:w-auto text-center hover:-translate-y-0.5 active:translate-y-0"
+                      className="px-6 py-2.5 bg-black text-white font-extrabold text-sm rounded-xl hover:bg-[#ff5a1f]  transition-all duration-300 shadow-sm cursor-pointer w-full sm:w-auto text-center hover:-translate-y-0.5 active:translate-y-0"
                     >
                       Book a Call
                     </button>
@@ -472,19 +472,16 @@ export default function App() {
           </div>
         </section>
       </main>
-
       {/* Footer */}
       <Footer
         onContactClick={() => setIsContactOpen(true)}
         onBookClick={() => setIsBookCallOpen(true)}
       />
-
       {/* Contact Inquiry Modal */}
       <ContactModal
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
       />
-
       {/* Call Scheduler Modal */}
       <BookCallModal
         isOpen={isBookCallOpen}
