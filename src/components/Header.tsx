@@ -34,7 +34,7 @@ export default function Header() {
 
           <a
             href="https://www.martechadda.com/v4/home"
-            className="px-8 text-slate-600 hover:text-[#ff2e2e] font-medium text-sm border-r border-slate-200"
+            className="px-8 text-slate-600 git push origin main font-medium text-sm border-r border-slate-200"
           >
             Resources
           </a>
@@ -72,31 +72,31 @@ export default function Header() {
         <div className="md:hidden absolute top-[72px] left-0 w-full bg-white border-b border-slate-200 px-6 py-5 flex flex-col shadow-md">
           <a
             href="https://www.martechadda.com/v4/home"
-            className="py-3 border-b border-slate-100 text-slate-700"
+            className="py-3 border-b border-slate-100 text-slate-700 active:text-[#ff2e2e]"
           >
             Marketing Services
           </a>
           <a
             href="https://www.martechadda.com/v4/home"
-            className="py-3 border-b border-slate-100 text-slate-700"
+            className="py-3 border-b border-slate-100 text-slate-700 active:text-[#ff2e2e]"
           >
             How It Works
           </a>
           <a
             href="https://www.martechadda.com/v4/home"
-            className="py-3 border-b border-slate-100 text-slate-700"
+            className="py-3 border-b border-slate-100 text-slate-700 active:text-[#ff2e2e]"
           >
             Resources
           </a>
           <a
             href="https://www.martechadda.com/v4/home"
-            className="py-3 border-b border-slate-100 text-slate-700"
+            className="py-3 border-b border-slate-100 text-slate-700 active:text-[#ff2e2e]"
           >
             For Experts
           </a>
           <a
             href="https://www.martechadda.com/login"
-            className="py-3 text-slate-700"
+            className="py-3 text-slate-700 active:text-[#ff2e2e]"
           >
             Login
           </a>
