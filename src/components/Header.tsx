@@ -19,28 +19,28 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center">
           <a
-            href="#"
+            href="https://www.martechadda.com/v4/home"
             className="px-8 text-slate-600 hover:text-[#ff2e2e] font-medium text-sm border-r border-slate-200"
           >
             Marketing Services
           </a>
 
           <a
-            href="#"
+            href="https://www.martechadda.com/v4/home"
             className="px-8 text-slate-600 hover:text-[#ff2e2e] font-medium text-sm border-r border-slate-200"
           >
             How It Works
           </a>
 
           <a
-            href="#"
+            href="https://www.martechadda.com/v4/home"
             className="px-8 text-slate-600 hover:text-[#ff2e2e] font-medium text-sm border-r border-slate-200"
           >
             Resources
           </a>
 
           <a
-            href="#"
+            href="https://www.martechadda.com/v4/home"
             className="px-8 text-slate-600 hover:text-[#ff2e2e] font-medium text-sm border-r border-slate-200"
           >
             For Experts
@@ -69,20 +69,44 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-[72px] left-0 w-full bg-white border-b border-slate-200 px-6 py-5 flex flex-col shadow-md">
-          <a href="#" className="py-3 border-b border-slate-100 text-slate-700">
+        <div className="md:hidden absolute top-[72px] left-0 w-full bg-white border-b border-slate-200 px-6 py-5 flex flex-col shadow-md z-50">
+          <a
+            href="https://www.martechadda.com/v4/home"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="py-3 px-2 rounded-lg border-b border-slate-100 text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+          >
             Marketing Services
           </a>
-          <a href="#" className="py-3 border-b border-slate-100 text-slate-700">
+
+          <a
+            href="https://www.martechadda.com/v4/home"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="py-3 px-2 rounded-lg border-b border-slate-100 text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+          >
             How It Works
           </a>
-          <a href="#" className="py-3 border-b border-slate-100 text-slate-700">
+
+          <a
+            href="https://www.martechadda.com/v4/home"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="py-3 px-2 rounded-lg border-b border-slate-100 text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+          >
             Resources
           </a>
-          <a href="#" className="py-3 border-b border-slate-100 text-slate-700">
+
+          <a
+            href="https://www.martechadda.com/v4/home"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="py-3 px-2 rounded-lg border-b border-slate-100 text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+          >
             For Experts
           </a>
-          <a href="#" className="py-3 text-slate-700">
+
+          <a
+            href="https://www.martechadda.com/login"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="py-3 px-2 rounded-lg text-slate-700 hover:text-[#ff2e2e] hover:bg-orange-50 transition-all duration-200"
+          >
             Login
           </a>
         </div>
